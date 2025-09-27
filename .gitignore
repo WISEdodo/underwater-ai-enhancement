@@ -1,0 +1,28 @@
+# --- Python Virtual Environment ---
+# Ignore the virtual environment folder
+venv/
+
+# --- Python Cache ---
+# Ignore compiled Python files and cache folders
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- IDE / Editor Folders ---
+# Ignore metadata from common editors like VSCode and PyCharm
+.vscode/
+.idea/
+
+# --- Operating System Files ---
+# Ignore macOS specific files
+.DS_Store
+
+# --- Large Data & Model Files (Optional but Recommended) ---
+# Uncomment these lines if your datasets or model files are too large for Git
+# data/raw/
+# data/processed/
+# models/
+
+# --- Jupyter Notebook Checkpoints ---
+.ipynb_checkpoints
