@@ -1,0 +1,18 @@
+# FUnIE-GAN Web Application Requirements
+# This file EXCLUDES LangChain to resolve dependency conflicts.
+# === Web Application ===
+Flask
+
+# === Core AI & Computer Vision ===
+# All versions are pinned to be compatible with each other.
+tensorflow<2.14
+numpy<=1.24.3
+typing-extensions<4.6.0
+opencv-python<4.10
+
+# Other utilities
+Pillow
+scikit-image
+matplotlib
+PyYAML
+glob2
