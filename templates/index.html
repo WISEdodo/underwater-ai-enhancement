@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Underwater Image Enhancement</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Underwater Image Enhancement</h1>
+            <p>Maritime Security Operations Center</p>
+        </header>
+
+        <main>
+            <!-- File Upload Control -->
+            <div class="controls">
+                <p class="instruct">Select an underwater image to begin the enhancement process.</p>
+                <div class="input-group">
+                    <!-- The file input element for the user to select an image -->
+                    <input type="file" id="file-input" accept="image/png, image/jpeg, image/jpg" style="display: none;">
+                    <button onclick="document.getElementById('file-input').click()" class="upload-btn">Choose File</button>
+                    <p id="file-name" class="file-name-display"></p>
+                    <!-- The button to trigger the enhancement process, disabled by default -->
+                    <button id="enhance-btn" disabled>Enhance Image</button>
+                </div>
+            </div>
+
+            <!-- Results Display -->
+            <div class="results-container">
+                <div class="image-panel" id="original-panel">
+                    <h2>Original Image</h2>
+                    <!-- This box will contain the preview of the user's uploaded image -->
+                    <div class="image-box" id="original-image-box">
+                        <p>Waiting for image upload...</p>
+                    </div>
+                </div>
+                <div class="image-panel" id="enhanced-panel">
+                    <h2>Enhanced Image</h2>
+                    <!-- This box will contain the spinner and the final enhanced image -->
+                    <div class="image-box" id="enhanced-image-box">
+                        <!-- The loading spinner, hidden by default -->
+                        <div class="spinner" id="spinner" style="display: none;"></div>
+                        <p>Result will appear here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Log Panel -->
+            <div class="log-panel">
+                <h2>Processing Log</h2>
+                <!-- This preformatted text element will show status updates from the script -->
+                <pre id="log">Awaiting instructions...</pre>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Powered by FUnIE-GAN</p>
+        </footer>
+    </div>
+
+    <!-- Link to your JavaScript file -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
